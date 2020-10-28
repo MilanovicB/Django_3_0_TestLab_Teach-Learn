@@ -9,6 +9,6 @@ urlpatterns = [
     path('contact/', Contact, name='contact'),
     path('newsdate/<int:year>', NewsDate, name='newsdate'),
     path('signup/', register, name='register'),
-    path('addUser', addUser, name='addUser'),
+    path('addUser/', addUser, name='addUser')
 
 ]
