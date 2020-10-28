@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from .models import News
-from .forms import RegistrationForm
+from .forms import RegistrationForm, RegistrationData, RegistrationModal
 from .models import RegistrationData
 from django.contrib import messages
+
 # Create your views here.
 
 
@@ -68,3 +69,19 @@ def addUser(request):
 
     return redirect('register')
 
+def modelform(request):
+
+    context = {
+    "modalform": RegistrationModal
+
+    }
+
+    return render(request, 'modalform.html', context)
+
+def addModalForm(request):
+    mymodalform = RegistrationModal(request.POST)
+
+    if mymodalform.is_valid():
+        mymodalform.save()
+    
+    return redirect('form')  
