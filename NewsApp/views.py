@@ -72,7 +72,7 @@ def addUser(request):
 def modelform(request):
 
     context = {
-    "modalform": RegistrationModal
+    "modalform":RegistrationModal
 
     }
 

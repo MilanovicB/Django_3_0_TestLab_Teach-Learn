@@ -12,4 +12,5 @@ urlpatterns = [
     path('modalform/', modelform, name='form'),
     path('addmodalform/', addModalForm, name='modalform'),
 
+
 ]

@@ -3,17 +3,34 @@
 {% block title %} Modal Form Registration {% endblock %}
 
 {% block body %}
-
+<div class="container">
+</div>
 
 <h1> Modal Form Registration </h1>
 
     <form action="{% url 'modalform' %}" method="post">
 
-
-
     {% csrf_token %}
-{{ modalform.as_p }}
 
+
+    <div class="form-group">
+    <label>Username</label>
+
+    {{ modalform.username }}
+    <label>Password</label>
+    <div class="form-group">
+
+    {{ modalform.password }}
+    <label>Email</label>
+    <div class="form-group">
+    {{ modalform.email }}
+    <label>Phone</label>
+    <div class="form-group">
+    {{ modalform.phone }}
+
+
+
+    </div>
         <input type="submit" class="btn btn-success" value= "Register"/>
 
 
